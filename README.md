@@ -18,3 +18,10 @@ In Development
 # Chart Lemming
 AI powered Chart Generator
 
+# -- Full Stack --
+
+# -- Games --
+
+# - Pygame
+
+# - Godot

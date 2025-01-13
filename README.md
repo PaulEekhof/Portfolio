@@ -8,6 +8,13 @@
 # Mastermind 2025
 Mastermind 2025 is a modern Flutter implementation of the classic code-breaking game. Challenge your logic and deduction skills by breaking the secret color code!
 
+# CRUD
+A simple CRUD application
+
 # -- Python --
 
 # Personal Budgeting
+
+# Chart Lemming
+AI powered Chart Generator
+

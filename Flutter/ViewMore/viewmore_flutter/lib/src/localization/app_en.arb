@@ -1,0 +1,6 @@
+{
+  "appTitle": "viewmore_flutter",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}

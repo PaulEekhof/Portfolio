@@ -1,0 +1,37 @@
+<!-- The user must be able to:
+    - Upload files
+    - Give extension name
+    - Download package and key to open
+     -->
+
+{% extends "header.html" %}
+{% block title %}Upload Files{% endblock %}
+{% block content %}
+    <h1 class="text-center">Upload Files</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-warning" role="alert">
+                <ul class="mb-0">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form action="/upload" method="post" enctype="multipart/form-data" class="mt-4">
+        <div class="form-group">
+            <label for="file">Select Files</label>
+            <input type="file" class="form-control-file" id="file" name="file" multiple>
+        </div>
+        <div class="form-group">
+            <label for="extension">Extension Name</label>
+            <input type="text" class="form-control" id="extension" name="extension" placeholder="Extension Name">
+        </div>
+        <div class="form-group">
+            <label for="key">Key</label>
+            <input type="text" class="form-control" id="key" name="key" placeholder="Key">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+{% endblock %}

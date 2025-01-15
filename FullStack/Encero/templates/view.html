@@ -1,0 +1,54 @@
+{% extends "header.html" %}
+{% block title %}View Package{% endblock %}
+{% block content %}
+    <h1 class="text-center">View Package</h1>
+    <div class="form-container">
+        <form action="/view_package" method="post" enctype="multipart/form-data" class="mt-4">
+            <div class="form-group">
+                <label for="package">Upload Package File:</label>
+                <input type="file" class="form-control-file" id="package" name="package" required>
+            </div>
+            <div class="form-group">
+                <label for="key">Key:</label>
+                <input type="text" class="form-control" id="key" name="key" required>
+            </div>
+            <div class="form-group">
+                <label for="display_option">Display Option:</label>
+                <select id="display_option" class="form-control" name="display_option" required>
+                    <option value="names">File Names and Types</option>
+                    <option value="content">File Names, Types, and Content</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">View Package</button>
+        </form>
+    </div>
+    <div id="package-contents" class="mt-4">
+        <!-- Package contents will be displayed here -->
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const response = await fetch('/view_package', {
+                    method: 'POST',
+                    body: formData
+                });
+                const files = await response.json();
+                const packageContents = document.getElementById('package-contents');
+                packageContents.innerHTML = '';
+                files.forEach(file => {
+                    const fileInfo = document.createElement('div');
+                    fileInfo.className = 'file-info';
+                    fileInfo.innerHTML = `<strong>File Name:</strong> ${file.name}<br>
+                                          <strong>File Type:</strong> ${file.type}<br>`;
+                    if (file.content) {
+                        fileInfo.innerHTML += `<strong>Content:</strong> <pre>${file.content}</pre>`;
+                    }
+                    packageContents.appendChild(fileInfo);
+                });
+            });
+        });
+    </script>
+{% endblock %}

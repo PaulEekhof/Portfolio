@@ -81,7 +81,6 @@ Chart Lemming is a web application that enables users to upload CSV data, select
   - HTML Interface
   - CSS Style
   - JS scripts
-  - 
 
 # 2. Encero
 This simple application allows users to upload multiple files, specify a custom extension for the package, and download the package along with a key to open it. It also gives the user the ability to open a custom file with a key.
@@ -94,3 +93,10 @@ This simple application allows users to upload multiple files, specify a custom 
   - Upload the custom packaged file
   - Upload the key
   - Display the files included in the package
+
+## Includes
+  - Pack Model
+  - CSS Style
+  - JS Script
+  - HTML Interface
+  - Custom Logo

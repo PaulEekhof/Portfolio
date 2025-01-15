@@ -3,6 +3,16 @@
 # 1. Quizzy
 **Quizzy** is a fun and interactive Flutter application that generates hilarious questions using a custom-trained GPT-2 model running on a local server. The app provides users with random funny questions, allows them to input their own prompts, and lets them save their favorite questions for later use.
 
+## Features
+  - Generate Random Funny Questions: With a tap, users can get a random funny question
+  - Input a Custom Prompt: Users can input their own prompts for unique questions
+  - Save Favorite Questions: Save and access favorite questions anytime
+  - View Saved Questions: Dedicated screen to view and manage saved questions
+  - Simple and Intuitive UI: Clean, user-friendly interface
+  - State Management Using Provider: Efficient state management
+  - Multiple Quiz Types: Support for various question categories
+  - Localization Support: Ready for multiple languages
+
 # 2. Mastermind 2025
 Mastermind 2025 is a modern Flutter implementation of the classic code-breaking game. Challenge your logic and deduction skills by breaking the secret color code!
 

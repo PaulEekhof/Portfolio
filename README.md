@@ -14,6 +14,16 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
 # -- Python --
 
 # 1. Personal Budgeting
+This is a personal expense management application built with Python and customtkinter.
+
+## Features
+- Add new expenses
+- Edit existing expenses
+- Delete expenses
+- Export expenses to a text file
+- Search expenses by category
+- View all expenses
+- Calculate total, difference, and future balance based on selected expenses
 
 # -- Full Stack --
 # 1. Chart Lemming

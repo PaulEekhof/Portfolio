@@ -61,19 +61,6 @@ Chart Lemming is a web application that enables users to upload CSV data, select
 - View detailed explanations for each chart
 - Predict the next sentence for the chart explanation using a custom-trained AI model
 
-## Chart types:
-  - Line
-  - Bar
-  - Pie
-  - Histogram
-  - Scatter
-
-## Used file types:
-  - css
-  - js
-  - html
-  - py
-
 # 2. Encero
 This simple application allows users to upload multiple files, specify a custom extension for the package, and download the package along with a key to open it. It also gives the user the ability to open a custom file with a key.
 

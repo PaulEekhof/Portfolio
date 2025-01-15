@@ -1,5 +1,3 @@
-# Portfolio
-
 # -- Flutter --
 
 # 1. Quizzy

@@ -19,3 +19,13 @@ FullStack/Chart_Lemming/results/checkpoint-13/optimizer.pt
 FullStack/Chart_Lemming/results/checkpoint-13/scheduler.pt
 FullStack/Chart_Lemming/results/checkpoint-21/model.safetensors
 FullStack/Chart_Lemming/results/checkpoint-21/optimizer.pt
+Flutter/Quizzy/quizzy/funny_question_model/model.safetensors
+Flutter/Quizzy/quizzy/results/checkpoint-500/model.safetensors
+Flutter/Quizzy/quizzy/results/checkpoint-500/optimizer.pt
+Flutter/Quizzy/quizzy/results/checkpoint-500/scheduler.pt
+Flutter/Quizzy/quizzy/results/checkpoint-3/model.safetensors
+Flutter/Quizzy/quizzy/results/checkpoint-3/optimizer.pt
+Flutter/Quizzy/quizzy/results/checkpoint-3/scheduler.pt
+Flutter/Quizzy/quizzy/results/checkpoint-507/optimizer.pt
+Flutter/Quizzy/quizzy/results/checkpoint-507/scheduler.pt
+Flutter/Quizzy/quizzy/results/checkpoint-507/model.safetensors

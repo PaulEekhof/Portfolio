@@ -1,0 +1,76 @@
+# Chart Lemming
+
+Chart Lemming is a web application that allows users to upload CSV data, choose a graph type, and display the selected graph type on an HTML page. Users can switch between different graph types for the uploaded data and view detailed explanations for each chart.
+
+## Features
+
+- Upload CSV data
+- Choose from various chart types: Line, Bar, Pie, Scatter, Histogram
+- Display the selected chart type on an HTML page
+- Switch between different chart types for the uploaded data
+- View detailed explanations for each chart
+- Predict the next sentence for the chart explanation using a custom-trained AI model
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/chart-lemming.git
+    cd chart-lemming
+    ```
+
+2. Create a virtual environment and activate it:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install the required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. Run the Flask application:
+    ```sh
+    python server.py
+    ```
+
+5. Open your web browser and navigate to `http://127.0.0.1:5000/`.
+
+## Usage
+
+1. Upload a CSV file using the provided form.
+2. Select the desired chart type from the dropdown menu.
+3. Click the "Create Chart" button to generate and display the chart.
+4. View the detailed explanation for the chart.
+5. Switch between different chart types using the dropdown menu.
+
+## Example
+
+Here is an example of how to use the [ChartCreator](http://_vscodecontentref_/28) and [ChartExplanation](http://_vscodecontentref_/29) classes:
+
+```python
+from models.chart_creator import ChartCreator
+from models.explenation_creator import ChartExplanation
+
+# Example dataset path
+csv_path = 'datasets/medium_datasets.csv'
+
+# Create a ChartExplanation instance
+chart_explainer = ChartExplanation(
+    dataset_path=csv_path,
+    chart_type='Line',
+    chart_params=['Month', 'Product_A']
+)
+
+# Generate chart HTML from ChartCreator
+chart_creator = ChartCreator(csv_path, 'Line', ['Month', 'Product_A'])
+chart_html = chart_creator.render_html()
+
+# Combine chart with explanation
+final_html = chart_explainer.render_html(chart_html)
+
+# Print or use in your web app
+print(final_html)
+```
+## Project Structure

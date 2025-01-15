@@ -13,3 +13,9 @@ Flutter/Random_Question_LLM/Quizzy/quizzy/results/checkpoint-500/optimizer.pt
 Flutter/Random_Question_LLM/Quizzy/quizzy/results/checkpoint-500/scheduler.pt
 Flutter/Random_Question_LLM/Quizzy/quizzy/results/checkpoint-507/optimizer.pt
 Flutter/Random_Question_LLM/Quizzy/quizzy/results/checkpoint-507/scheduler.pt
+FullStack/Chart_Lemming/custom_models/test_custom_model/model.safetensors
+FullStack/Chart_Lemming/results/checkpoint-13/model.safetensors
+FullStack/Chart_Lemming/results/checkpoint-13/optimizer.pt
+FullStack/Chart_Lemming/results/checkpoint-13/scheduler.pt
+FullStack/Chart_Lemming/results/checkpoint-21/model.safetensors
+FullStack/Chart_Lemming/results/checkpoint-21/optimizer.pt

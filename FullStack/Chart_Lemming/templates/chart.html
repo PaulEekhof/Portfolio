@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Lemming</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Chart Lemming</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/upload">Upload Dataset</a>
+    </nav>
+    <div class="container">
+        <form id="uploadForm" action="upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file" accept=".csv">
+            <select name="chartType" id="chartType">
+                <option value="Line">Line</option>
+                <option value="Bar">Bar</option>
+                <option value="Pie">Pie</option>
+                <option value="Scatter">Scatter</option>
+                <option value="Histogram">Histogram</option>
+            </select>
+            <button type="submit">Create Chart</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="chartCanvas"></canvas>
+        </div>
+        <div class="explanation-container">
+            <h2>AI Chart Explanation</h2>
+            <p id="explanationText"></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Chart Lemming. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('chartCanvas').getContext('2d');
+            let myChart = new Chart(ctx, {
+                type: 'bar', // Default chart type
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Dataset',
+                        data: [],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'X Axis'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Y Axis'
+                            },
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            function updateChartData(newData, newLabels, newType, explanation) {
+                myChart.config.type = newType.toLowerCase();
+                myChart.data.datasets[0].data = newData;
+                myChart.data.labels = newLabels;
+                myChart.update();
+
+                // Update explanation
+                document.getElementById('explanationText').innerText = explanation;
+            }
+
+            document.getElementById('uploadForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        updateChartData(data.newData, data.newLabels, document.getElementById('chartType').value, data.explanation);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+</body>
+</html>

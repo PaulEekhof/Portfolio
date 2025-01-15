@@ -16,6 +16,18 @@
 # 2. Mastermind 2025
 Mastermind 2025 is a modern Flutter implementation of the classic code-breaking game. Challenge your logic and deduction skills by breaking the secret color code!
 
+## Features
+
+- 🎮 Classic Mastermind gameplay
+- 🌓 Dark/Light theme support
+- 💾 Save game progress
+- 📊 Score tracking
+- 🔧 Adjustable difficulty levels
+- 📱 Responsive design for all screen sizes
+
+
+
+
 # 3. CRUD
 This project is a simple CRUD (Create, Read, Update, Delete) application built with Flutter. It includes a custom drawer for easy navigation between different screens.
 

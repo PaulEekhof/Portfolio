@@ -42,3 +42,15 @@ Users can seamlessly switch between different chart types for the uploaded data 
   - js
   - html
   - py
+
+# 2. Encero
+This simple application allows users to upload multiple files, specify a custom extension for the package, and download the package along with a key to open it. It also gives the user the ability to open a custom file with a key.
+
+## Features
+  - Upload multiple files
+  - Specify a custom extension for the package
+  - Download the packaged files
+  - Download the key to open the package
+  - Upload the custom packaged file
+  - Upload the key
+  - Display the files included in the package

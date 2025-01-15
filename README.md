@@ -28,6 +28,7 @@ This is a personal expense management application built with Python and customtk
 # -- Full Stack --
 # 1. Chart Lemming
 AI powered Chart Generator. Create 5 different graphs from the data you upload. Generate an explenation from the custom model. The custom model is trained with the test data only. The interface is webbased.
+
 Chart types:
   - Line
   - Bar

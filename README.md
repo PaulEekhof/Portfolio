@@ -23,9 +23,6 @@ This is a personal expense management application built with Python and customtk
 - View all expenses
 - Calculate total, difference, and future balance based on selected expenses
 
-# ---- C# ----
-# 1. CRUD
-
 # ---- Full Stack ----
 # 1. Chart Lemming
 Chart Lemming is a web application that enables users to upload CSV data, select a chart type, and display the chosen chart on an HTML page. 

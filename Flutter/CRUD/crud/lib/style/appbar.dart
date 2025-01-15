@@ -4,7 +4,7 @@ import 'style.dart';
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
 
-  MyAppBar({required this.title});
+  const MyAppBar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -17,5 +17,5 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

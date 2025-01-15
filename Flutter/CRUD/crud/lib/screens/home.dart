@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../style/drawer.dart';
 
 class HomeScreen extends StatefulWidget {
-  static const String routeName = 'home_screen';
+  static const String routeName = '/home';
 
   const HomeScreen({super.key});
   @override

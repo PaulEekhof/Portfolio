@@ -59,18 +59,16 @@ class MyApp extends StatelessWidget {
           // SettingsController to display the correct theme.
           theme: ThemeData(
             primaryColor: AppColors.primary,
-            colorScheme: ColorScheme(
+            colorScheme: const ColorScheme(
               primary: AppColors.primary,
               primaryContainer: AppColors.primaryVariant,
               secondary: AppColors.secondary,
               secondaryContainer: AppColors.secondaryVariant,
               surface: AppColors.surface,
-              background: AppColors.background,
               error: AppColors.error,
               onPrimary: AppColors.onPrimary,
               onSecondary: AppColors.onSecondary,
               onSurface: AppColors.onSurface,
-              onBackground: AppColors.onBackground,
               onError: AppColors.onError,
               brightness: Brightness.dark,
             ),

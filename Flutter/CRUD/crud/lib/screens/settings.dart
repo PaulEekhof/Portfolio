@@ -4,6 +4,7 @@ class SettingsScreen extends StatefulWidget {
   static const routeName = '/settings';
 
   const SettingsScreen({super.key});
+
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
 }

@@ -1,25 +1,36 @@
 import 'package:flutter/material.dart';
-import '../style/drawer.dart';
+import '../classes/crudop.dart';
 
-class DeleteScreen extends StatefulWidget {
-  const DeleteScreen({super.key});
+class DeleteScreen extends StatelessWidget {
+  final CrudOperations crudOperations;
 
-  @override
-  _DeleteScreenState createState() => _DeleteScreenState();
-}
+  DeleteScreen({required this.crudOperations});
 
-class _DeleteScreenState extends State<DeleteScreen> {
   @override
   Widget build(BuildContext context) {
+    final items = crudOperations.readItems();
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Delete Screen'),
+        title: Text('Delete Item'),
       ),
-      drawer: AppDrawer(),
-      body: const Center(
-        child: Text('Welcome to the Delete Screen!'),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          final item = items[index];
+          return ListTile(
+            title: Text(item['name']),
+            subtitle: Text(item['description']),
+            trailing: IconButton(
+              icon: Icon(Icons.delete),
+              onPressed: () {
+                crudOperations.deleteItem(item['id']);
+                Navigator.pop(context);
+              },
+            ),
+          );
+        },
       ),
     );
   }
 }
-

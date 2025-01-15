@@ -1,60 +1,31 @@
-import 'dart:convert';
-import 'package:shared_preferences/shared_preferences.dart';
-
 class CrudOperations {
-  final String storageKey;
+  final List<Map<String, dynamic>> _items = [];
 
-  CrudOperations(this.storageKey);
-
-  Future<List<dynamic>> getAll() async {
-    final prefs = await SharedPreferences.getInstance();
-    final data = prefs.getString(storageKey);
-    if (data != null) {
-      return json.decode(data);
-    } else {
-      return [];
-    }
+  void createItem(String name, String description) {
+    final newItem = {
+      'id': _items.length + 1,
+      'name': name,
+      'description': description,
+    };
+    _items.add(newItem);
   }
 
-  Future<dynamic> getOne(String id) async {
-    final items = await getAll();
-    return items.firstWhere((item) => item['id'] == id, orElse: () => null);
+  List<Map<String, dynamic>> readItems() {
+    return _items;
   }
 
-  Future<void> create(Map<String, dynamic> data) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final items = await getAll();
-      
-      // Ensure required fields exist
-      if (!data.containsKey('id')) {
-        throw Exception('Record must have an ID');
-      }
-      
-      // Add the new item
-      items.add(data);
-      
-      // Save back to storage
-      await prefs.setString(storageKey, json.encode(items));
-    } catch (e) {
-      throw Exception('Failed to create record: $e');
-    }
-  }
-
-  Future<void> update(String id, Map<String, dynamic> data) async {
-    final prefs = await SharedPreferences.getInstance();
-    final items = await getAll();
-    final index = items.indexWhere((item) => item['id'] == id);
+  void updateItem(int id, String name, String description) {
+    final index = _items.indexWhere((item) => item['id'] == id);
     if (index != -1) {
-      items[index] = data;
-      await prefs.setString(storageKey, json.encode(items));
+      _items[index] = {
+        'id': id,
+        'name': name,
+        'description': description,
+      };
     }
   }
 
-  Future<void> delete(String id) async {
-    final prefs = await SharedPreferences.getInstance();
-    final items = await getAll();
-    items.removeWhere((item) => item['id'] == id);
-    await prefs.setString(storageKey, json.encode(items));
+  void deleteItem(int id) {
+    _items.removeWhere((item) => item['id'] == id);
   }
 }

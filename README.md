@@ -17,5 +17,10 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
 
 # -- Full Stack --
 # 1. Chart Lemming
-AI powered Chart Generator. Create 5 different graphs from the data you upload. Generate an explenation from the custom model. The custom model is trained with the test data only.
+AI powered Chart Generator. Create 5 different graphs from the data you upload. Generate an explenation from the custom model. The custom model is trained with the test data only. The interface is webbased.
+Used file types:
+  - css
+  - js
+  - html
+  - py
 

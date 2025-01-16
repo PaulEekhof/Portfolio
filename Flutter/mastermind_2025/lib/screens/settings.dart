@@ -34,7 +34,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   Future<void> _toggleTheme(bool isDarkMode) async {
     final themeProvider = Provider.of<ThemeProvider>(context, listen: false);
-    themeProvider.toggleTheme(isDarkMode);
+    themeProvider.toggleTheme();
   }
 
   Future<void> _resetScores() async {

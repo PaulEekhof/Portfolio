@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mastermind_2025/screens/game.dart';
+import 'package:provider/provider.dart';
+import 'package:mastermind_2025/models/theme_provider.dart';
 import 'package:mastermind_2025/screens/home.dart';
-import 'package:mastermind_2025/screens/info.dart';
-import 'package:mastermind_2025/screens/instructions.dart';
+import 'package:mastermind_2025/screens/game.dart';
 import 'package:mastermind_2025/screens/options.dart';
 import 'package:mastermind_2025/screens/score.dart';
 import 'package:mastermind_2025/screens/settings.dart';
-import 'package:mastermind_2025/models/save_load.dart';
-import 'package:provider/provider.dart';
-import 'package:mastermind_2025/models/theme_provider.dart';
+import 'package:mastermind_2025/screens/instructions.dart';
+import 'package:mastermind_2025/screens/info.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final isDarkMode = await SaveLoad.loadThemePreference() ?? false;
-
+void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (_) => ThemeProvider(isDarkMode: isDarkMode),
+      create: (context) => ThemeProvider(),
       child: const MyApp(), // Remove isDarkMode parameter
     ),
   );

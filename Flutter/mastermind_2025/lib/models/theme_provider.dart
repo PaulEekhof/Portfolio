@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mastermind_2025/models/save_load.dart';
 import 'package:mastermind_2025/models/styles.dart';
 
 class ThemeProvider extends ChangeNotifier {
-  bool _isDarkMode;
-
-  ThemeProvider({required bool isDarkMode}) : _isDarkMode = isDarkMode;
+  bool _isDarkMode = false;
 
   bool get isDarkMode => _isDarkMode;
 
@@ -53,9 +50,8 @@ class ThemeProvider extends ChangeNotifier {
     ),
   );
 
-  Future<void> toggleTheme(bool isDarkMode) async {
-    _isDarkMode = isDarkMode;
-    await SaveLoad.saveThemePreference(isDarkMode);
+  void toggleTheme() {
+    _isDarkMode = !_isDarkMode;
     notifyListeners();
   }
 }

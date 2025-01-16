@@ -67,7 +67,7 @@ main {
     right: 10px;
 }
 
-slider__button:hover {
+.slider__button:hover {
     background-color: rgba(224, 224, 224, 0.9);
 }
 

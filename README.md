@@ -1,4 +1,4 @@
-# Images
+# ---- Images ----
 This project showcases a simple image slideshow using a custom JavaScript slider and a grid layout for displaying project images.
 
 # ---- Flutter ----

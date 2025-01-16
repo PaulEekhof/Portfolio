@@ -14,6 +14,20 @@ This project showcases a simple image slideshow using a custom JavaScript slider
 - Clickable images that open in a modal with a caption.
 - Responsive design with a fixed image size for consistency.
 
+## Projects
+
+- Chart Lemming
+  - Web based Data package system
+  - Upload data files, create key and package, download, upload to unpack.
+- Encero
+  - This simple application allows users to upload multiple files, specify a custom extension for the package, and download the package along with a key to open it. It also gives the user the ability to open a custom file with a key.
+- Flutter CRUD
+  - Create, Read, Update, Delete
+- Mastermind 2025
+  - Guess the correct code
+- Personal Budget
+  - Simple Python Customtkinter App for personal finance.
+
 ## License
 
 This project is licensed under the MIT License.

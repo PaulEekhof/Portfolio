@@ -5,7 +5,7 @@ import '../classes/crudop.dart';
 class CreateScreen extends StatelessWidget {
   final CrudOperations crudOperations;
 
-  CreateScreen({required this.crudOperations});
+  const CreateScreen({super.key, required this.crudOperations});
 
   @override
   Widget build(BuildContext context) {

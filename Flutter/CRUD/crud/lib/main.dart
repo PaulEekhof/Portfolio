@@ -12,6 +12,8 @@ void main() {
 class MyApp extends StatelessWidget {
   final CrudOperations crudOperations = CrudOperations();
 
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   final CrudOperations crudOperations;
 
-  HomeScreen({required this.crudOperations});
+  const HomeScreen({super.key, required this.crudOperations});
 
   @override
   Widget build(BuildContext context) {

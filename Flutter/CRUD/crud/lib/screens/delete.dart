@@ -4,7 +4,7 @@ import '../classes/crudop.dart';
 class DeleteScreen extends StatelessWidget {
   final CrudOperations crudOperations;
 
-  DeleteScreen({required this.crudOperations});
+  const DeleteScreen({super.key, required this.crudOperations});
 
   @override
   Widget build(BuildContext context) {

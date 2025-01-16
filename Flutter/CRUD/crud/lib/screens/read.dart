@@ -5,7 +5,7 @@ import 'detail.dart';
 class ReadScreen extends StatelessWidget {
   final CrudOperations crudOperations;
 
-  ReadScreen({required this.crudOperations});
+  const ReadScreen({super.key, required this.crudOperations});
 
   @override
   Widget build(BuildContext context) {

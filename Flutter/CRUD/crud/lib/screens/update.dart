@@ -5,7 +5,7 @@ import '../classes/crudop.dart';
 class UpdateScreen extends StatelessWidget {
   final CrudOperations crudOperations;
 
-  UpdateScreen({required this.crudOperations});
+  const UpdateScreen({super.key, required this.crudOperations});
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +41,12 @@ class UpdateFormScreen extends StatelessWidget {
   final Map<String, dynamic> item;
   final CrudOperations crudOperations;
 
-  UpdateFormScreen({required this.item, required this.crudOperations});
+  const UpdateFormScreen({super.key, required this.item, required this.crudOperations});
 
   @override
   Widget build(BuildContext context) {
-    final _nameController = TextEditingController(text: item['name']);
-    final _descriptionController = TextEditingController(text: item['description']);
+    final nameController = TextEditingController(text: item['name']);
+    final descriptionController = TextEditingController(text: item['description']);
 
     return Scaffold(
       appBar: AppBar(

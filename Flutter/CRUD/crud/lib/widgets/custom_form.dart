@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomForm extends StatefulWidget {
   final Function(String, String) onSubmit;
 
-  CustomForm({required this.onSubmit});
+  const CustomForm({super.key, required this.onSubmit});
 
   @override
   _CustomFormState createState() => _CustomFormState();

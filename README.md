@@ -41,15 +41,23 @@ This is a personal expense management application built with Python and customtk
   - Calculate total, difference, and future balance based on selected expenses
 
 # 2. Console CRUD
-This is a simple CRUD (Create, Read, Update, Delete) application written in Python. It allows you to manage a list of items, each with an ID, name, and quantity, stored in a JSON file.
+This repository contains two simple CRUD (Create, Read, Update, Delete) applications written in Python. One application manages a list of generic items, and the other manages expenses and incomes. Both applications store data in JSON files.
 
 ## Features
-
+### Item Management (console_crud.py)
 - Create new items
 - Read and display all items
 - Update existing items
 - Delete items
 - Search for items by ID or name
+
+### Expense Tracker (console_expenses.py)
+- Add new expenses or incomes
+- View all expenses and incomes
+- Update existing expenses or incomes
+- Delete expenses or incomes
+- Search for expenses or incomes by description or date
+- Calculate and display the total balance
 
 # ---- Full Stack ----
 

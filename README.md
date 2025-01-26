@@ -40,6 +40,17 @@ This is a personal expense management application built with Python and customtk
   - View all expenses
   - Calculate total, difference, and future balance based on selected expenses
 
+# 2. Console CRUD
+This is a simple CRUD (Create, Read, Update, Delete) application written in Python. It allows you to manage a list of items, each with an ID, name, and quantity, stored in a JSON file.
+
+## Features
+
+- Create new items
+- Read and display all items
+- Update existing items
+- Delete items
+- Search for items by ID or name
+
 # ---- Full Stack ----
 
 # 1. Chart Lemming

@@ -2,7 +2,7 @@ import json
 import os
 
 # Constants
-JSON_FILE = 'data.json'
+JSON_FILE = 'save.json'
 
 # Load data from JSON file
 def load_data():
@@ -107,7 +107,6 @@ def search_item(data):
             print(f"ID: {item['id']}, Name: {item['name']}, Quantity: {item['quantity']}")
     else:
         print("No matching items found.")
-        
 
 # Main menu
 def main_menu():

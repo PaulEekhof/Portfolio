@@ -40,7 +40,7 @@ This is a personal expense management application built with Python and customtk
   - View all expenses
   - Calculate total, difference, and future balance based on selected expenses
 
-# 2. Console CRUD
+# 2. Console CRUD and Expense Tracker
 This repository contains two simple CRUD (Create, Read, Update, Delete) applications written in Python. One application manages a list of generic items, and the other manages expenses and incomes. Both applications store data in JSON files.
 
 ## Features

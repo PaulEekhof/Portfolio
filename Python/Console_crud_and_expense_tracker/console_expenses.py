@@ -6,6 +6,8 @@ from datetime import datetime
 JSON_FILE = 'expenses.json'
 
 # Load data from JSON file
+
+
 def load_data():
     if os.path.exists(JSON_FILE):
         try:
@@ -16,6 +18,8 @@ def load_data():
     return []
 
 # Save data to JSON file
+
+
 def save_data(data):
     try:
         with open(JSON_FILE, 'w') as file:
@@ -24,12 +28,16 @@ def save_data(data):
         print("Error: Unable to save data.")
 
 # Generate a unique ID
+
+
 def generate_id(data):
     if not data:
         return 1
     return max(item['id'] for item in data) + 1
 
 # Validate user input for integers
+
+
 def input_int(prompt):
     while True:
         try:
@@ -38,6 +46,8 @@ def input_int(prompt):
             print("Invalid input. Please enter a valid integer.")
 
 # Validate user input for non-empty strings
+
+
 def input_str(prompt):
     while True:
         value = input(prompt).strip()
@@ -46,6 +56,8 @@ def input_str(prompt):
         print("Input cannot be empty. Please try again.")
 
 # Validate user input for float
+
+
 def input_float(prompt):
     while True:
         try:
@@ -54,6 +66,8 @@ def input_float(prompt):
             print("Invalid input. Please enter a valid number.")
 
 # Validate user input for date (YYYY-MM-DD)
+
+
 def input_date(prompt):
     while True:
         date_str = input_str(prompt)
@@ -64,6 +78,8 @@ def input_date(prompt):
             print("Invalid date format. Please use YYYY-MM-DD.")
 
 # Validate user input for expense type (income/expense)
+
+
 def input_type(prompt):
     while True:
         type_str = input(prompt).strip().lower()
@@ -72,6 +88,8 @@ def input_type(prompt):
         print("Invalid type. Please enter 'income' or 'expense'.")
 
 # Create a new expense
+
+
 def create_expense(data):
     expense = {
         'id': generate_id(data),
@@ -85,6 +103,8 @@ def create_expense(data):
     print("Expense added successfully!")
 
 # Read and display all expenses
+
+
 def read_expenses(data):
     if not data:
         print("No expenses found.")
@@ -101,20 +121,28 @@ def read_expenses(data):
         print("-------------------")
 
 # Update an existing expense
+
+
 def update_expense(data):
     expense_id = input_int("Enter expense ID to update: ")
     for expense in data:
         if expense['id'] == expense_id:
-            expense['date'] = input_date(f"Enter new date (current: {expense['date']}): ")
-            expense['amount'] = input_float(f"Enter new amount (current: {expense['amount']}): ")
-            expense['description'] = input_str(f"Enter new description (current: {expense['description']}): ")
-            expense['type'] = input_type(f"Enter new type (current: {expense['type']}): ")
+            expense['date'] = input_date(
+                f"Enter new date (current: {expense['date']}): ")
+            expense['amount'] = input_float(
+                f"Enter new amount (current: {expense['amount']}): ")
+            expense['description'] = input_str(
+                f"Enter new description (current: {expense['description']}): ")
+            expense['type'] = input_type(
+                f"Enter new type (current: {expense['type']}): ")
             save_data(data)
             print("Expense updated successfully!")
             return
     print("Expense not found.")
 
 # Delete an expense
+
+
 def delete_expense(data):
     expense_id = input_int("Enter expense ID to delete: ")
     for expense in data:
@@ -126,6 +154,8 @@ def delete_expense(data):
     print("Expense not found.")
 
 # Search for expenses by description or date
+
+
 def search_expenses(data):
     search_term = input_str("Enter search term (description or date): ")
     results = [
@@ -146,6 +176,8 @@ def search_expenses(data):
         print("No matching expenses found.")
 
 # Calculate total balance (income - expenses)
+
+
 def calculate_balance(data):
     balance = 0
     for expense in data:
@@ -154,6 +186,23 @@ def calculate_balance(data):
         else:
             balance -= expense['amount']
     return balance
+
+# The user can give two dates and the program will calculate the balance between those two dates
+
+
+def calculate_balance_from_date():
+    data = load_data()
+    start_date = input_date("Enter start date (YYYY-MM-DD): ")
+    end_date = input_date("Enter end date (YYYY-MM-DD): ")
+    balance = 0
+    for expense in data:
+        if start_date <= expense['date'] <= end_date:
+            if expense['type'] == 'income':
+                balance += expense['amount']
+            else:
+                balance -= expense['amount']
+    return balance
+
 
 # Main menu
 def main_menu():
@@ -166,7 +215,8 @@ def main_menu():
         print("4. Delete Expense")
         print("5. Search Expenses")
         print("6. View Balance")
-        print("7. Exit")
+        print("7. Calculate Balance from Date")
+        print("8. Exit")
         choice = input("Enter your choice: ").strip()
 
         if choice == '1':
@@ -183,10 +233,14 @@ def main_menu():
             balance = calculate_balance(data)
             print(f"\nCurrent Balance: {balance}")
         elif choice == '7':
+            balance = calculate_balance_from_date()
+            break
+        elif choice == '8':
             print("Exiting...")
             break
         else:
             print("Invalid choice. Please try again.")
+
 
 # Run the program
 if __name__ == "__main__":

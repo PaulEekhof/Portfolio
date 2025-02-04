@@ -74,7 +74,7 @@ print(f"Next number: {next_number}")
 ## Directory Structure
 
 ```
-NumberPredictor/
+NovaCaster/
 ├── gui.py          # GUI implementation
 ├── predictor.py    # Core prediction logic
 ├── rules.py        # Pattern recognition rules

@@ -1,4 +1,4 @@
-# Number Predictor
+# Nova Caster
 
 A Python application that predicts the next number in a sequence by combining traditional mathematical pattern recognition with AI-powered GGUF model predictions.
 

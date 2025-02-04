@@ -103,3 +103,44 @@ This simple application allows users to upload multiple files, specify a custom 
   - JS Script
   - HTML Interface
   - Custom Logo
+
+# ---- AI Development and implementation ----
+
+# 1. Nova Caster
+A Python application that combines mathematical pattern recognition with AI-powered predictions using GGUF models to predict the next number in a sequence.
+
+## Features
+  - Dark-themed GUI with modern styling
+  - CSV data import and analysis
+  - Pattern recognition for various sequences:
+    - Arithmetic and geometric progressions
+    - Fibonacci-like sequences
+    - Polynomial relationships
+    - Prime number patterns
+    - Exponential growth/decay
+    - Modular arithmetic patterns
+    - Symmetrical sequences
+    - Factorization analysis
+  - AI-powered predictions using GGUF models
+  - Comprehensive error handling and logging
+
+## Includes
+  - GUI
+    - A customtkinter gui to give the user an interface.
+  - Predictor
+    -  Class to make a prediction using a locally run GGUF model
+  - Rules
+    - 10 rules for analyzing number sequences (like; is_fibonacci_like, factorization, is_geometric)
+
+## How It Works
+The application uses a two-stage prediction process:
+
+  1. Mathematical Pattern Analysis:
+     - Checks for common mathematical sequences
+     - Analyzes numerical relationships
+     - Identifies patterns in prime factors
+  
+  2. AI-Based Prediction:
+     - Uses GGUF model for complex pattern recognition
+     - Provides predictions when mathematical patterns aren't clear
+     - Combines both approaches for optimal results

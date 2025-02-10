@@ -26,6 +26,8 @@ This project showcases a simple image slideshow using a custom JavaScript slider
 - Console CRUD and Expense tracker
 - Mastermind 2025
   - Guess the correct code
+- File IT!
+  - Clean your files
 - Personal Budget
   - Simple Python Customtkinter App for personal finance.
 - Nova Caster

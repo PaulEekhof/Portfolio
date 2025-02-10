@@ -25,6 +25,16 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
   - **Update**: ✏️ Edit button for each record
   - **Delete**: 🗑️ Delete button with confirmation dialog
 
+## 3. File IT!
+A Flutter-based file management application designed for efficient organization and storage. This will also help you clean up redundant or duplicate files.
+
+## 📱 Features
+- Modern UI/UX design
+- File organization and management
+- Cross-platform support (iOS, Android)
+- State management implementation
+- Localization support
+
 # ---- Python ----
 
 ## 1. Personal Budgeting 💰

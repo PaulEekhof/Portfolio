@@ -57,6 +57,8 @@ A Flutter-based chat application that implements a modern chat interface with AI
   - Backend server
 
 ### How It Works
+Make sure you have Ollama installed and the same model as in the server.py. You can change the model if you like. Just pull it on Ollama and change the nessecairy flutter and python files.
+
   - Run the model on Ollama
   - Open the server
   - Run the Flutter appliction to chat and interact with the model.

@@ -1,4 +1,3 @@
-
 # ---- Showcase ----
 🖼️ This project showcases a simple image slideshow using a custom JavaScript slider and a grid layout for displaying project images.
 
@@ -43,7 +42,7 @@ The application uses a two-stage prediction process:
      - 📈 Provides predictions when mathematical patterns aren't clear
      - 🎯 Combines both approaches for optimal results
 
-## 2. Deepseek Chat
+## 2. Deepseek Chat 💭
 A Flutter-based chat application that implements a modern chat interface with AI integration using Deepseek-r1:14b.
 
 - 🤖 Ollama integration for running AI models
@@ -53,15 +52,17 @@ A Flutter-based chat application that implements a modern chat interface with AI
 - ⚡ Real-time AI chat responses
 
 ### Includes
-  - Full Flutter application with chat fuctionality.
-  - Backend server
+  - 📱 **Flutter App**
+    - Full Flutter application with chat functionality.
+  - 🖥️ **Backend**
+    - Backend server
 
 ### How It Works
-Make sure you have Ollama installed and the same model as in the server.py. You can change the model if you like. Just pull it on Ollama and change the nessecairy flutter and python files.
+Make sure you have Ollama installed and the same model as in the server.py. You can change the model if you like. Just pull it on Ollama and change the necessary flutter and python files.
 
-  - Run the model on Ollama
-  - Open the server
-  - Run the Flutter appliction to chat and interact with the model.
+  - 🚀 Run the model on Ollama
+  - 🌐 Open the server
+  - 📱 Run the Flutter application to chat and interact with the model.
 
 # ---- Flutter ----
 
@@ -143,17 +144,17 @@ Chart Lemming is a web application that enables users to upload CSV data, select
   - 🤖 Predict the next sentence for the chart explanation using a custom-trained AI model
 
 ### Includes
-  - 📊 Chart creator
-  - 📖 Explanation creator
-  - 🔄 File converter
-  - 🏋️ Model Trainer
-  - 🔮 Predictor
-  - 🌐 Server
-  - 📂 Datasets
-  - 🧪 Custom Test Model
-  - 💻 HTML Interface
-  - 🎨 CSS Style
-  - 📝 JS Scripts
+  - 📊 **Chart Creator** - Create various chart types
+  - 📝 **Explanation Creator** - Generate chart explanations
+  - 🔄 **File Converter** - Convert between file formats
+  - 🤖 **Model Trainer** - Train custom AI models
+  - 🔮 **Predictor** - Make predictions using trained models
+  - 🌐 **Server** - Host the web application
+  - 📂 **Datasets** - Sample data for testing
+  - 🧪 **Custom Test Model** - Testing framework
+  - 💻 **HTML Interface** - User interface components
+  - 🎨 **CSS Style** - Styling definitions
+  - 📜 **JS Scripts** - Client-side functionality
 
 ## 2. Encero 🔐
 This simple application allows users to upload multiple files, specify a custom extension for the package, and download the package along with a key to open it. It also gives the user the ability to open a custom file with a key.
@@ -168,9 +169,9 @@ This simple application allows users to upload multiple files, specify a custom 
   - 📜 Display the files included in the package
 
 ### Includes
-  - 📦 Pack Model
-  - 🎨 CSS Style
-  - 📝 JS Script
-  - 💻 HTML Interface
-  - 🔵 Custom Logo
+  - 🔐 **Pack Model** - Core encryption functionality
+  - 🎨 **CSS Style** - Visual styling
+  - 📜 **JS Script** - Client-side processing
+  - 💻 **HTML Interface** - User interface
+  - 🎯 **Custom Logo** - Branding assets
 

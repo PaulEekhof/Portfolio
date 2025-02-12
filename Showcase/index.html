@@ -5,49 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Images Of Projects</h1>
+        <h1>Portfolio Showcase</h1>
     </header>
-    <main style="display: flex; flex-direction: column; align-items: center;">
-        <h1 class="type-title">---- Flutter ----</h1>
-        <h2 class="project-title">Mastermind</h2>
-        <h4 class="project-description">Mastermind is a project that I worked on in 2025. It is a simple game where the player has to guess the correct sequence of colors. The game is played on a grid layout. Click on a cell to select a color.</h4>
-        <div class="grid" id="mastermind-grid">
-            <!-- Mastermind images will be dynamically added here -->
-        </div>
-        <h2 class="project-title">Flutter CRUD</h2>
-        <h4 class="project-description">Flutter CRUD is a project that I worked on in 2025. It is a simple app that allows the user to perform CRUD operations on a list of items. The items are displayed in a grid layout. Click on an item to view its details.</h4>
-        <div class="grid" id="fluttercrud-grid">
-            <!-- Encero images will be dynamically added here -->
-        </div>
-        <h1 class="type-title">---- Python ----</h1>
+    <main>
+        <div class="container" data-aos="fade-up">
+            <h1 class="type-title">AI Development and Implementation</h1>
 
-        <h2 class="project-title">Personal Budgeting</h2>
-        <h4 class="project-description">Personal Budgeting is a project that I worked on in 2025. It is a simple app that allows the user to track their income and expenses. The data is displayed in a grid layout. Click on a data point to view its details.</h4>
-        <div class="grid" id="personal-budget-grid">
-            <!-- Encero images will be dynamically added here -->
-        </div>
-        <h1 class="type-title">---- Full Stack ----</h1>
+            <section data-aos="fade-up">
+                <h2 class="project-title">Nova Caster</h2>
+                <p class="project-description">A sophisticated Python application combining mathematical pattern recognition with AI-powered predictions using GGUF models for sequence analysis.</p>
+                <div class="grid" id="nova-caster-grid"></div>
+            </section>
 
-        <h2 class="project-title">Chart Lemming</h2>
-        <h4 class="project-description">Chart Lemming is a project that I worked on in 2025. It is a simple app that allows the user to create and customize charts. The charts are displayed in a grid layout. Click on a chart to view it in a modal.</h4>
-        <div class="grid" id="chart-lemming-grid">
-            <!-- Encero images will be dynamically added here -->
-        </div>
-        <h2 class="project-title" >Encero</h2>
-        <h4 class="project-description">Encero is a project that I worked on in 2025. It is a simple website that displays images of the number zero. The images are displayed in a grid layout. Click on an image to view it in a modal.</h4>
-        <div class="grid" id="encero-grid">
-            <!-- Encero images will be dynamically added here -->
-        </div>
-        <h1 class="type-title">---- AI Development and implementation ----</h1>
+            <section data-aos="fade-up">
+                <h2 class="project-title">Deepseek Chat (Deepseek-r1:14b)</h2>
+                <p class="project-description">Deepseek Chat is a project that I worked on in 2025. It is a simple chat application that allows users to interact with Deepseek-r1:14b. Just run the model on Ollama and start the server.</p>
+                <div class="grid" id="deepseek-chat-grid"></div>  <!-- Fixed ID -->
+            </section>
 
-        <h2 class="project-title">Nova Caster</h2>
-        <h4 class="project-description">A Python application that combines mathematical pattern recognition with AI-powered predictions using GGUF models to predict the next number in a sequence.</h4>
-        <div class="grid" id="nova-caster-grid">  <!-- Fixed ID -->
-            <!-- Nova Caster images will be dynamically added here -->
+            <h1 class="type-title">Flutter</h1>
+
+            <section data-aos="fade-up">
+                <h2 class="project-title">Mastermind</h2>
+                <p class="project-description">Mastermind is a project that I worked on in 2025. It is a simple game where the player has to guess the correct sequence of colors. The game is played on a grid layout. Click on a cell to select a color.</p>
+                <div class="grid" id="mastermind-grid"></div>
+            </section>
+
+            <section data-aos="fade-up">
+                <h2 class="project-title">Flutter CRUD</h2>
+                <p class="project-description">Flutter CRUD is a project that I worked on in 2025. It is a simple app that allows the user to perform CRUD operations on a list of items. The items are displayed in a grid layout. Click on an item to view its details.</p>
+                <div class="grid" id="fluttercrud-grid"></div>
+            </section>
+
+            <h1 class="type-title">Python</h1>
+
+            <section data-aos="fade-up">
+                <h2 class="project-title">Personal Budgeting</h2>
+                <p class="project-description">Personal Budgeting is a project that I worked on in 2025. It is a simple app that allows the user to track their income and expenses. The data is displayed in a grid layout. Click on a data point to view its details.</p>
+                <div class="grid" id="personal-budget-grid"></div>
+            </section>
+
+            <h1 class="type-title">Chrome Extentions</h1>
+            <section data-aos="fade-up">
+                <h2 class="project-title">Earthquake Notifications</h2>
+                <p class="project-description">A Chrome extension that monitors and displays recent earthquake activity using USGS data.</p>
+                <div class="grid" id="earthquake-notifications-grid"></div>
+            </section>
+
+            <h1 class="type-title">Full Stack</h1>
+
+            <section data-aos="fade-up">
+                <h2 class="project-title">Chart Lemming</h2>
+                <p class="project-description">Chart Lemming is a project that I worked on in 2025. It is a simple app that allows the user to create and customize charts. The charts are displayed in a grid layout. Click on a chart to view it in a modal.</p>
+                <div class="grid" id="chart-lemming-grid"></div>
+            </section>
+
+            <section data-aos="fade-up">
+                <h2 class="project-title">Encero</h2>
+                <p class="project-description">Encero is a project that I worked on in 2025. It is a simple website that displays images of the number zero. The images are displayed in a grid layout. Click on an image to view it in a modal.</p>
+                <div class="grid" id="encero-grid"></div>
+            </section>
         </div>
     </main>
     <footer>
@@ -62,6 +84,14 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
     <script src="grid.js"></script>
 </body>
 </html>

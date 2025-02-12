@@ -60,118 +60,155 @@ const imageList_nova_caster =[
 
 const description_nova_caster = 'A Python application that combines mathematical pattern recognition with AI-powered predictions using GGUF models to predict the next number in a sequence.';
 
+// DS_Chat
+const imageList_ds_chat = [
+    { src: 'img/DS_Chat_1.png', alt: 'Image 1' },
+    { src: 'img/DS_Chat_2.png', alt: 'Image 2' },
+    { src: 'img/DS_Chat_3.png', alt: 'Image 3' },
+    { src: 'img/DS_Chat_4.png', alt: 'Image 4' },
+];
+
+const description_ds_chat = 'DS Chat is a chat application that allows users to interact with the AI model loaded in the included server.';
+
+// Earthquake Prediction
+const imageList_earthquake_prediction = [
+    { src: 'img/Earthquake_Prediction_1.png', alt: 'Image 1' },
+];
+
+const description_earthquake_prediction = 'This project is a simple CRUD (Create, Read, Update, Delete) application built with Flutter. It includes a custom drawer for easy navigation between different screens.';
+
+// Earthquake Notifications
+const imageList_earthquake_notifications = [
+    { src: 'img/Earthquake_Notifications_1.png', alt: 'Image 1' },
+];
+
+const description_earthquake_notifications = 'A Chrome extension that monitors and displays recent earthquake activity using USGS data.';
+
 document.addEventListener('DOMContentLoaded', () => {
-    const enceroGrid = document.getElementById('encero-grid');
-    const mastermindGrid = document.getElementById('mastermind-grid');
-    const fluttercrudGrid = document.getElementById('fluttercrud-grid');
-    const personalBudgetGrid = document.getElementById('personal-budget-grid');
-    const chartLemmingGrid = document.getElementById('chart-lemming-grid');
-    const novaCasterGrid = document.getElementById('nova-caster-grid');
+    // Debug logging
+    console.log('DOM Content Loaded');
 
-    const enceroDescription = document.createElement('p');
-    enceroDescription.textContent = description_encero;
-    enceroGrid.parentNode.insertBefore(enceroDescription, enceroGrid);
+    // Configuration object mapping grid IDs to their descriptions
+    const projectConfigs = [
+        { gridId: 'encero-grid', description: description_encero },
+        { gridId: 'mastermind-grid', description: description_mastermind },
+        { gridId: 'fluttercrud-grid', description: description_fluttercrud },
+        { gridId: 'personal-budget-grid', description: description_personal_budget },
+        { gridId: 'chart-lemming-grid', description: description_chart_lemming },
+        { gridId: 'nova-caster-grid', description: description_nova_caster },
+        { gridId: 'deepseek-chat-grid', description: description_ds_chat },
+        { gridId: 'earthquake-prediction-grid', description: description_earthquake_prediction },
+        { gridId: 'earthquake-notifications-grid', description: description_earthquake_notifications }
+    ];
 
-    const mastermindDescription = document.createElement('p');
-    mastermindDescription.textContent = description_mastermind;
-    mastermindGrid.parentNode.insertBefore(mastermindDescription, mastermindGrid);
+    // Helper function to create and insert description
+    function createDescription(gridId, descriptionText) {
+        const gridElement = document.getElementById(gridId);
+        if (!gridElement) {
+            console.error(`Grid element not found: ${gridId}`);
+            return null;
+        }
 
-    const fluttercrudDescription = document.createElement('p');
-    fluttercrudDescription.textContent = description_fluttercrud;
-    fluttercrudGrid.parentNode.insertBefore(fluttercrudDescription, fluttercrudGrid);
+        const description = document.createElement('p');
+        description.textContent = descriptionText;
+        gridElement.parentNode.insertBefore(description, gridElement);
+        return gridElement;
+    }
 
-    const personalBudgetDescription = document.createElement('p');
-    personalBudgetDescription.textContent = description_personal_budget;
-    personalBudgetGrid.parentNode.insertBefore(personalBudgetDescription, personalBudgetGrid);
+    // Create all descriptions and store grid elements
+    const gridElements = projectConfigs
+        .map(config => createDescription(config.gridId, config.description))
+        .filter(element => element !== null);
 
-    const chartLemmingDescription = document.createElement('p');
-    chartLemmingDescription.textContent = description_chart_lemming;
-    chartLemmingGrid.parentNode.insertBefore(chartLemmingDescription, chartLemmingGrid);
-
-    const novaCasterDescription = document.createElement('p');
-    novaCasterDescription.textContent = description_nova_caster;
-    novaCasterGrid.parentNode.insertBefore(novaCasterDescription, novaCasterGrid);
-
-    imageList_encero.forEach(image => {
+    function createGridItem(image) {
         const gridItem = document.createElement('div');
         gridItem.classList.add('grid__item');
+        gridItem.setAttribute('data-aos', 'fade-up');
+        
         const img = document.createElement('img');
+        // Fix image path - remove '../'
         img.src = image.src;
         img.alt = image.alt;
+        
+        // Enhanced error handling
+        img.onerror = () => {
+            console.error(`Failed to load image: ${img.src}`);
+            gridItem.innerHTML = `
+                <div style="height: 200px; display: flex; align-items: center; justify-content: center; background: #2a2a2a; color: #fff;">
+                    <p>Image not found: ${image.src}</p>
+                </div>
+            `;
+        };
+        
+        // Loading animation
+        img.style.opacity = '0';
+        img.onload = () => {
+            console.log(`Loaded image: ${img.src}`);
+            img.style.transition = 'opacity 0.5s ease';
+            img.style.opacity = '1';
+        };
+
         gridItem.appendChild(img);
-        enceroGrid.appendChild(gridItem);
+        return gridItem;
+    }
+
+    // Simplified grid loading with error checking
+    function loadImagesIntoGrid(imageList, gridId) {
+        const gridElement = document.getElementById(gridId);
+        if (!gridElement) {
+            console.error(`Grid not found: ${gridId}`);
+            return;
+        }
+
+        console.log(`Loading images for ${gridId}`);
+        imageList.forEach(image => {
+            const gridItem = createGridItem(image);
+            gridElement.appendChild(gridItem);
+        });
+    }
+
+    // Load all grids with error checking
+    const gridConfigs = {
+        'encero-grid': imageList_encero,
+        'mastermind-grid': imageList_mastermind,
+        'fluttercrud-grid': imageList_fluttercrud,
+        'personal-budget-grid': imageList_personal_budget,
+        'chart-lemming-grid': imageList_chart_lemming,
+        'nova-caster-grid': imageList_nova_caster,
+        'deepseek-chat-grid': imageList_ds_chat,
+        'earthquake-notifications-grid': imageList_earthquake_notifications
+    };
+
+    // Load images for each grid
+    Object.entries(gridConfigs).forEach(([gridId, imageList]) => {
+        loadImagesIntoGrid(imageList, gridId);
     });
 
-    imageList_mastermind.forEach(image => {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid__item');
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.alt;
-        gridItem.appendChild(img);
-        mastermindGrid.appendChild(gridItem);
-    });
-
-    imageList_fluttercrud.forEach(image => {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid__item');
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.alt;
-        gridItem.appendChild(img);
-        fluttercrudGrid.appendChild(gridItem);
-    });
-
-    imageList_personal_budget.forEach(image => {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid__item');
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.alt;
-        gridItem.appendChild(img);
-        personalBudgetGrid.appendChild(gridItem);
-    });
-
-    imageList_chart_lemming.forEach(image => {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid__item');
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.alt;
-        gridItem.appendChild(img);
-        chartLemmingGrid.appendChild(gridItem);
-    });
-
-    imageList_nova_caster.forEach(image => {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid__item');
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.alt;
-        gridItem.appendChild(img);
-        novaCasterGrid.appendChild(gridItem);
-    });
-
+    // Modal functionality
     const modal = document.getElementById('myModal');
     const modalImage = document.getElementById('modalImage');
     const modalCaption = document.getElementById('modalCaption');
     const closeBtn = document.querySelector('.close');
 
-    document.querySelectorAll('.grid__item img').forEach(img => {
-        img.addEventListener('click', () => {
-            modal.style.display = 'block';
-            modalImage.src = img.src;
-            modalCaption.textContent = img.alt;
+    if (modal && modalImage && modalCaption && closeBtn) {
+        document.querySelectorAll('.grid__item img').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'block';
+                modalImage.src = img.src;
+                modalCaption.textContent = img.alt;
+            });
         });
-    });
 
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
+        closeBtn.addEventListener('click', () => {
             modal.style.display = 'none';
-        }
-    });
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('Modal elements not found');
+    }
 });

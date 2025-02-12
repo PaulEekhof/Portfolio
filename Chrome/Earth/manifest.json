@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Earthquake Predictor",
+  "version": "1.0",
+  "description": "Predict and alert users about earthquakes.",
+  "permissions": ["notifications", "storage", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

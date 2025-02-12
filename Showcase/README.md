@@ -32,6 +32,8 @@ This project showcases a simple image slideshow using a custom JavaScript slider
   - Simple Python Customtkinter App for personal finance.
 - Nova Caster
   - A Python application that combines mathematical pattern recognition with AI-powered predictions using GGUF models to predict the next number in a sequence.
+- Deepseek Chat
+  - Deepseek Chat is a project that I worked on in 2025. It is a simple chat application that allows users to send and receive messages. The messages are displayed in a grid layout. 
 
 ## License
 

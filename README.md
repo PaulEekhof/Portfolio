@@ -129,6 +129,18 @@ This repository contains two simple CRUD (Create, Read, Update, Delete) applicat
 - 🔍 Search for expenses or incomes by description or date
 - 📊 Calculate and display the total balance
 
+# ---- Chrome extentions ----
+
+## 1. Earthquake prediction.
+A Chrome extension that monitors and displays recent earthquake activity using USGS data.
+
+### ✨ Features
+- 📊 Displays the 3 most recent earthquakes
+- 🔄 Auto-updates every 10 minutes
+- 🔔 Push notifications for earthquakes magnitude 5.0 or higher
+- ⚡ Real-time data from USGS
+
+
 # ---- Full Stack ----
 
 ## 1. Chart Lemming 📊

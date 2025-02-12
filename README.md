@@ -15,6 +15,7 @@
 ### Python
 - Personal Budgeting
 - Console CRUD
+- Console Expense tracker
 
 ### Chrome Extentions
 - Earthquake prediction

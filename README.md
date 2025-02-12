@@ -1,6 +1,28 @@
 # ---- Showcase ----
 🖼️ This project showcases a simple image slideshow using a custom JavaScript slider and a grid layout for displaying project images.
 
+## Quick overview
+
+### AI Development and Implementation
+- Nova Caster
+- Deepseek Chat
+
+### Flutter
+- Mastermind 2025
+- CRUD
+- File it!
+
+### Python
+- Personal Budgeting
+- Console CRUD
+
+### Chrome Extentions
+- Earthquake prediction
+
+### Full Stack
+- Chart Lemming
+- Encero
+
 # ---- AI Development and Implementation ----
 
 ## 1. Nova Caster 🔢🤖

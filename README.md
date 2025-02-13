@@ -19,6 +19,10 @@
 
 ### Chrome Extentions
 - Earthquake prediction
+<<<<<<< Updated upstream
+=======
+- Summy
+>>>>>>> Stashed changes
 - Save And Read
 
 ### Full Stack
@@ -165,8 +169,15 @@ A Chrome extension that monitors and displays recent earthquake activity using U
 - 🔔 Push notifications for earthquakes magnitude 5.0 or higher
 - ⚡ Real-time data from USGS
 
+<<<<<<< Updated upstream
 ## 2. Save And Read
 # Save and Read Chrome Extension
+=======
+## 2. Summy Chrome
+Summerize you page with this eazy Chrome extention. Run your model, run the server and run the extention.
+
+## 3. Save And Read
+>>>>>>> Stashed changes
 The **Save and Read** Chrome extension allows users to save the current tab with a title, description, and note. Users can view a list of saved tabs, see when they were saved, and open them with a single click.
 
 ### Features

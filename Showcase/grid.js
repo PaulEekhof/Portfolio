@@ -84,6 +84,15 @@ const imageList_earthquake_notifications = [
 
 const description_earthquake_notifications = 'A Chrome extension that monitors and displays recent earthquake activity using USGS data.';
 
+// Save and read
+const imageList_save_and_read = [
+    { src: 'img/Save_and_Read_1.png', alt: 'Image 1' },
+    { src: 'img/Save_and_Read_2.png', alt: 'Image 2' },
+    { src: 'img/Save_and_Read_3.png', alt: 'Image 3' },
+];
+
+const description_save_and_read = 'The Save and Read Chrome extension allows users to save the current tab with a title, description, and note. Users can view a list of saved tabs, see when they were saved, and open them with a single click.';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Debug logging
     console.log('DOM Content Loaded');
@@ -98,7 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { gridId: 'nova-caster-grid', description: description_nova_caster },
         { gridId: 'deepseek-chat-grid', description: description_ds_chat },
         { gridId: 'earthquake-prediction-grid', description: description_earthquake_prediction },
-        { gridId: 'earthquake-notifications-grid', description: description_earthquake_notifications }
+        { gridId: 'earthquake-notifications-grid', description: description_earthquake_notifications },
+        { gridId: 'save-and-read-grid', description: description_save_and_read },
     ];
 
     // Helper function to create and insert description
@@ -176,7 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'chart-lemming-grid': imageList_chart_lemming,
         'nova-caster-grid': imageList_nova_caster,
         'deepseek-chat-grid': imageList_ds_chat,
-        'earthquake-notifications-grid': imageList_earthquake_notifications
+        'earthquake-notifications-grid': imageList_earthquake_notifications,
+        'save-and-read-grid': imageList_save_and_read,
     };
 
     // Load images for each grid

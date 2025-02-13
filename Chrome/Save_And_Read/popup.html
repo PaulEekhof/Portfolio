@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save and Read</title>
+    <script src="popup.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            width: 400px; /* Increase the width */
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #savedTabsContainer div {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative; /* Add position relative for delete button */
+        }
+        #savedTabsContainer div:hover {
+            background-color: #f1f1f1;
+        }
+        .button-container {
+            text-align: center;
+        }
+        #savedTabsContainer {
+            margin-top: 20px; /* Add space above the saved tabs container */
+        }
+        .delete-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Save and Read</h1>
+<div style="text-align: center;">
+        <img src="icons/icon.png" alt="App Icon" width="50" height="50">
+</div>
+    <div class="button-container">
+        <button id="saveButton">Save Current Tab</button>
+    </div>
+    <div>
+        <label for="descriptionInput">Description:</label>
+        <input type="text" id="descriptionInput" placeholder="Enter a short description">
+    </div>
+    <div>
+        <label for="noteInput">Note:</label>
+        <textarea id="noteInput" placeholder="Enter a note"></textarea>
+    </div>
+    <div class="button-container">
+        <button id="readButton">Show Saved Tabs</button>
+    </div>
+    <div class="button-container">
+        <button id="saveOfflineButton">Save Tab Offline</button>
+    </div>
+    <div class="button-container">
+        <button id="openSavedPageButton">Open Saved Tabs Page</button>
+    </div>
+    <div id="savedTabsContainer" style="text-align: center;"></div>
+</body>
+</html>

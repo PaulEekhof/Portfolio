@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saved Tabs</title>
+  <script src="saved.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+      width: 600px; /* Increase the width */
+    }
+    h1 {
+      font-size: 28px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .tab {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      background-color: white;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .tab:hover {
+      background-color: #f1f1f1;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tab strong {
+      font-size: 18px;
+      color: #007bff;
+    }
+    .tab p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .tab .note {
+      font-style: italic;
+      color: #777;
+    }
+    .tab button {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ff4d4d;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .tab button:hover {
+      background-color: #cc0000;
+    }
+    #savedTabsContainer {
+      margin-top: 20px; /* Add space above the saved tabs container */
+    }
+  </style>
+</head>
+<body>
+  <h1>Saved Tabs</h1>
+  <div id="savedTabsContainer"></div>
+</body>
+</html>

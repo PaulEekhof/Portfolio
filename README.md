@@ -167,7 +167,16 @@ A Chrome extension that monitors and displays recent earthquake activity using U
 - ⚡ Real-time data from USGS
 
 ## 2. Summy Chrome
-Summerize you page with this eazy Chrome extention. Run your model, run the server and run the extention.
+A Chrome extension that leverages OpenAI's ChatGPT to provide concise summaries of web pages. This extension helps users quickly grasp the main points of articles, blog posts, and other web content.
+
+### Features
+
+- 🤖 AI-powered summarization using ChatGPT
+- 🔑 Secure OpenAI API key management
+- ⌨️ Keyboard shortcuts support
+- 📱 Responsive popup interface
+- ⚡ Fast and efficient text processing
+- 🔒 Privacy-focused (API key stored locally)
 
 ## 3. Save And Read
 The **Save and Read** Chrome extension allows users to save the current tab with a title, description, and note. Users can view a list of saved tabs, see when they were saved, and open them with a single click.

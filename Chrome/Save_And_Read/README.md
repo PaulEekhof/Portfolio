@@ -8,16 +8,6 @@ The **Save and Read** Chrome extension allows users to save the current tab with
 - **Open Saved Tabs**: Click on any saved tab to open it in a new tab.
 - **Timestamp**: See when each tab was saved.
 
-## Screenshots
-
-### Popup Interface
-
-![Popup Interface](screenshots/popup.png)
-
-### Saved Tabs Page
-
-![Saved Tabs Page](screenshots/saved_tabs.png)
-
 ## Installation
 
 1. Clone or download this repository.

@@ -19,6 +19,7 @@
 
 ### Chrome Extentions
 - Earthquake prediction
+- Save And Read
 
 ### Full Stack
 - Chart Lemming
@@ -164,6 +165,15 @@ A Chrome extension that monitors and displays recent earthquake activity using U
 - 🔔 Push notifications for earthquakes magnitude 5.0 or higher
 - ⚡ Real-time data from USGS
 
+## 2. Save And Read
+# Save and Read Chrome Extension
+The **Save and Read** Chrome extension allows users to save the current tab with a title, description, and note. Users can view a list of saved tabs, see when they were saved, and open them with a single click.
+
+### Features
+- **Save Current Tab**: Save the title, URL, description, and a personal note for the current tab.
+- **View Saved Tabs**: Display a list of all saved tabs with their details.
+- **Open Saved Tabs**: Click on any saved tab to open it in a new tab.
+- **Timestamp**: See when each tab was saved.
 
 # ---- Full Stack ----
 

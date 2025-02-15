@@ -70,28 +70,35 @@ const imageList_ds_chat = [
 
 const description_ds_chat = 'DS Chat is a chat application that allows users to interact with the AI model loaded in the included server.';
 
-// Earthquake Prediction
-const imageList_earthquake_prediction = [
-    { src: 'img/Earthquake_Prediction_1.png', alt: 'Image 1' },
-];
-
-const description_earthquake_prediction = 'This project is a simple CRUD (Create, Read, Update, Delete) application built with Flutter. It includes a custom drawer for easy navigation between different screens.';
-
 // Earthquake Notifications
 const imageList_earthquake_notifications = [
-    { src: 'img/Earthquake_Notifications_1.png', alt: 'Image 1' },
+    { src: 'img/Earthquake_Notifications_1.png', alt: 'Extension popup showing recent earthquakes' },
+    { src: 'img/Earthquake_Notifications_2.png', alt: 'Extension settings page' }
 ];
 
 const description_earthquake_notifications = 'A Chrome extension that monitors and displays recent earthquake activity using USGS data.';
 
-// Save and read
-const imageList_save_and_read = [
-    { src: 'img/Save_and_Read_1.png', alt: 'Image 1' },
-    { src: 'img/Save_and_Read_2.png', alt: 'Image 2' },
-    { src: 'img/Save_and_Read_3.png', alt: 'Image 3' },
+// Earthquake Prediction
+const imageList_earthquake_prediction = [
+    { src: 'img/Earthquake_Prediction_1.png', alt: 'Image 1' },
+    { src: 'img/Earthquake_Prediction_2.png', alt: 'Image 2' },
+    { src: 'img/Earthquake_Prediction_3.png', alt: 'Image 3' },
+    { src: 'img/Earthquake_Prediction_4.png', alt: 'Image 4' },
+    { src: 'img/Earthquake_Prediction_5.png', alt: 'Image 5' },
+    { src: 'img/Earthquake_Prediction_6.png', alt: 'Image 6' },
+    { src: 'img/Earthquake_Prediction_7.png', alt: 'Image 7' },
 ];
 
-const description_save_and_read = 'The Save and Read Chrome extension allows users to save the current tab with a title, description, and note. Users can view a list of saved tabs, see when they were saved, and open them with a single click.';
+const description_earthquake_prediction = 'This project is a Python application that predicts the likelihood of an earthquake occurring in a given location.';
+
+// Save And Read
+const imageList_save_and_read = [
+    { src: 'img/Save_And_Read_1.png', alt: 'Image 1' },
+    { src: 'img/Save_And_Read_2.png', alt: 'Image 2' },
+    { src: 'img/Save_And_Read_3.png', alt: 'Image 3' },
+];
+
+const description_save_and_read = 'This simple application allows users to save and read text files.';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Debug logging
@@ -108,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { gridId: 'deepseek-chat-grid', description: description_ds_chat },
         { gridId: 'earthquake-prediction-grid', description: description_earthquake_prediction },
         { gridId: 'earthquake-notifications-grid', description: description_earthquake_notifications },
-        { gridId: 'save-and-read-grid', description: description_save_and_read },
+        { gridId: 'save-and-read-grid', description: description_save_and_read } // Add this line
     ];
 
     // Helper function to create and insert description
@@ -136,18 +143,19 @@ document.addEventListener('DOMContentLoaded', () => {
         gridItem.setAttribute('data-aos', 'fade-up');
         
         const img = document.createElement('img');
-        // Fix image path - remove '../'
+        // Debug log the image path
+        console.log(`Attempting to load image: ${image.src}`);
         img.src = image.src;
         img.alt = image.alt;
         
-        // Enhanced error handling
         img.onerror = () => {
             console.error(`Failed to load image: ${img.src}`);
-            gridItem.innerHTML = `
-                <div style="height: 200px; display: flex; align-items: center; justify-content: center; background: #2a2a2a; color: #fff;">
-                    <p>Image not found: ${image.src}</p>
-                </div>
-            `;
+            // Try alternate extension if first attempt fails
+            if (img.src.endsWith('.png')) {
+                img.src = image.src.replace('.png', '.PNG');
+            } else if (img.src.endsWith('.PNG')) {
+                img.src = image.src.replace('.PNG', '.png');
+            }
         };
         
         // Loading animation
@@ -187,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'nova-caster-grid': imageList_nova_caster,
         'deepseek-chat-grid': imageList_ds_chat,
         'earthquake-notifications-grid': imageList_earthquake_notifications,
-        'save-and-read-grid': imageList_save_and_read,
+        'save-and-read-grid': imageList_save_and_read  // Add this line
     };
 
     // Load images for each grid

@@ -16,6 +16,7 @@
 - Personal Budgeting
 - Console CRUD
 - Console Expense tracker
+- Rapture Age Calculator
 
 ### Chrome Extentions
 - Earthquake prediction
@@ -154,6 +155,10 @@ This repository contains two simple CRUD (Create, Read, Update, Delete) applicat
 - 🗑️ Delete expenses or incomes
 - 🔍 Search for expenses or incomes by description or date
 - 📊 Calculate and display the total balance
+
+## 3. Rapture Age Calculator
+A function and a Windows Desktop App to calculate your age in the amount of rapptures that should have happend by the given year.
+- Input your birthdate and the current year and calculate your rapture age!
 
 # ---- Chrome extentions ----
 
